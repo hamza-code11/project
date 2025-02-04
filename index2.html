@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Molla - Bootstrap eCommerce Template</title>
+        <meta name="keywords" content="HTML5 Template">
+        <meta name="description" content="Molla - Bootstrap eCommerce Template">
+        <meta name="author" content="p-themes">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/icons/site.html">
+        <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
+        <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+        <meta name="apple-mobile-web-app-title" content="Molla">
+        <meta name="application-name" content="Molla">
+        <meta name="msapplication-TileColor" content="#cc9966">
+        <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
+        <!-- Plugins CSS File -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
+        <!-- Main CSS File -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/skins/skin-demo-2.css">
+        <link rel="stylesheet" href="assets/css/demos/demo-2.css">
+    
+        <style>
+
+            
+/* services section  */
+
+.skills .card-row {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills .card-container {
+    display: flex;
+    animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.skills .card {
+    width: 22%;
+    /* Adjust for 4 cards in a row */
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+
+#services h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-shadow: var(--shadow-color);
+    /* animation: glowing 1.5s ease-in-out infinite alternate; */
+}
+
+/* @keyframes glowing {
+    0% {
+        text-shadow: 0 2px 6px rgba(0, 255, 255, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.5);
+    }
+} */
+
+#services .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#services .service-box {
+    background: var(--card-bg-color);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+    position: relative;
+    min-height: 350px; /* Set a minimum height for consistent card size */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure the text and content are spaced evenly */
+}
+
+#services .service-box:hover {
+    box-shadow: var(--shadow-color);
+}
+
+#services .service-box i {
+    font-size: 4rem;
+    color: #1abc9c;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+#services .service-box:hover i {
+    color: var(--btn-bg-color);
+}
+
+
+#services .service-box .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+#services .service-box h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-grow: 1; /* Ensure the title doesn't overlap the description */
+}
+
+#services .service-box p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#services .learn-more:hover {
+    color: #ecf0f1;
+    border-bottom: 2px solid #1abc9c;
+}
+
+@media (max-width: 768px) {
+    #services h2 {
+        font-size: 2.5rem;
+    }
+
+    #services .service-box {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+#services .service-box img {
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: 200px; /* Set a fixed height to ensure uniformity */
+    object-fit: cover; /* Ensure the image covers the space without stretching */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+
+            .solid{
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+<body>
+    
+
+    <section id="services">
+        <div class="container skills py-5">
+            <h2>Our Products</h2>
+            <div class="card-row">
+                <div class="card-container">
+    
+                    <!-- Laptop -->
+                    <div class="card service-box solid">
+                        <div class="card-body">
+                            <img src="download.jpeg" alt="Laptop" class="card-img-top">
+                            <h4 class="card-title">Laptop</h4>
+                            <p class="card-text">High-performance laptops for work, study, and entertainment. Equipped with powerful processors, long-lasting batteries, and stunning displays.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Wireless Headphones -->
+                    <div class="card service-box solid">
+                        <div class="card-body">
+                            <img src="images (4).jpeg" alt="Wireless Headphones" class="card-img-top">
+                            <h4 class="card-title">Wireless Headphones</h4>
+                            <p class="card-text">Enjoy immersive sound with noise-canceling wireless headphones. Perfect for music lovers and travelers.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Smartwatch -->
+                    <div class="card service-box solid">
+                        <div class="card-body">
+                            <img src="download (1).jpeg" alt="Smartwatch" class="card-img-top">
+                            <h4 class="card-title">Smartwatch</h4>
+                            <p class="card-text">Track your health, notifications, and more with a stylish and functional smartwatch. Stay connected and active all day.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Smartphone -->
+                    <div class="card service-box solid">
+                        <div class="card-body">
+                            <img src="download (2).jpeg" alt="Smartphone" class="card-img-top">
+                            <h4 class="card-title">Smartphone</h4>
+                            <p class="card-text">Latest smartphones with cutting-edge features, exceptional cameras, and lightning-fast performance for all your needs.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Gaming Console -->
+                    <div class="card service-box solid">
+                        <div class="card-body">
+                            <img src="download (3).jpeg" alt="Gaming Console" class="card-img-top">
+                            <h4 class="card-title">Gaming Console</h4>
+                            <p class="card-text">Get the ultimate gaming experience with the latest gaming consoles, featuring high-definition graphics and a vast library of games.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Bluetooth Speaker -->
+                    <div class="card service-box solid">
+                        <div class="card-body">
+                            <img src="download (4).jpeg" alt="Bluetooth Speaker" class="card-img-top">
+                            <h4 class="card-title">Bluetooth Speaker</h4>
+                            <p class="card-text">Portable and powerful Bluetooth speakers with rich sound quality, ideal for any occasion, from parties to outdoor adventures.</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+    
+    <!-- Plugins JS File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/superfish.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.plugin.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/demos/demo-2.js"></script>
+
+</body>
+</html>

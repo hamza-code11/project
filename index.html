@@ -1,154 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: Montserrat;
-	background: #262626;
-	width: 100%;
-	height: 100vh;
-}
-
-.outer {
-	position: relative;
-	background: #fff;
-	height: 350px;
-	width: 550px;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-}
-
-img {
-	position: absolute;
-	top: 0px;
-	right: -20px;
-	z-index: 0;
-	animation-delay: 0.5s;
-}
-
-.content {
-	animation-delay: 0.3s;
-	position: absolute;
-	left: 20px;
-	z-index: 3
-	
-}
-
-h1 {
-	color: #111;
-}
-
-p {
-	width: 280px;
-	font-size: 13px;
-	line-height: 1.4;
-	color: #aaa;
-	margin: 20px 0;
-	
-}
-
-.bg {
-	display: inline-block;
-	color: #fff;
-	background: cornflowerblue;
-	padding: 5px 10px;
-	border-radius: 50px;
-	font-size: .7em;
-}
-.button {
-	width: fit-content;
-	height: fit-content;
-	margin-top: 10px;
-	
-	
-	
-}
-
-.button a {
-	display: inline-block;
-	overflow: hidden;
-	position: relative;
-	font-size: 11px;
-	color: #111;
-	text-decoration: none;
-	padding: 10px 15px;
-	border: 1px solid #aaa;
-	font-weight: bold;
-	
-	
-}
-
-.button a:after{
-	content: "";
-	position: absolute;
-	top: 0;
-	right: -10px;
-	width: 0%;
-	background: #111;
-	height: 100%;
-	z-index: -1;
-	transition: width 0.3s ease-in-out;
-	transform: skew(-25deg);
-	transform-origin: right;
-}
-
-.button a:hover:after {
-	width: 150%;
-	left: -10px;
-	transform-origin: left;
-	
-}
-
-.button a:hover {
-	color: #fff;
-	transition: all 0.5s ease;
-}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Molla - Bootstrap eCommerce Template</title>
+	<meta name="keywords" content="HTML5 Template">
+	<meta name="description" content="Molla - Bootstrap eCommerce Template">
+	<meta name="author" content="p-themes">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+	<link rel="manifest" href="assets/images/icons/site.html">
+	<link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
+	<link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="Molla">
+	<meta name="application-name" content="Molla">
+	<meta name="msapplication-TileColor" content="#cc9966">
+	<meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
+	<!-- Plugins CSS File -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
+	<!-- Main CSS File -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/skins/skin-demo-2.css">
+	<link rel="stylesheet" href="assets/css/demos/demo-2.css">
 
 
-.button a:nth-of-type(1) {
-	border-radius: 50px 0 0 50px;
-	border-right: none;
-}
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-.button a:nth-of-type(2) {
-	border-radius: 0px 50px 50px 0;
-}
 
-.cart-icon {
-	padding-right: 8px;
-	
-}
+	<style>
+		.Deals-section .content p {
+			width: 90%;
+			font-size: 13px;
+			line-height: 1.4;
+			color: #aaa;
+			margin: 20px 0;
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-    </style>
+		}
+
+		.Deals-section .content .bg {
+			display: inline-block;
+			color: #fff;
+			background: cornflowerblue;
+			padding: 5px 10px;
+			border-radius: 50px;
+			font-size: .7em;
+		}
+
+		.Deals-section .content .button {
+			width: fit-content;
+			height: fit-content;
+			margin-top: 10px;
+
+
+
+		}
+
+		.Deals-section .content .button a {
+			display: inline-block;
+			overflow: hidden;
+			position: relative;
+			font-size: 11px;
+			color: #111;
+			text-decoration: none;
+			padding: 10px 15px;
+			border: 1px solid #aaa;
+			font-weight: bold;
+
+
+		}
+
+		.Deals-section .content .button a:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: -10px;
+			width: 0%;
+			background: #111;
+			height: 100%;
+			z-index: -1;
+			transition: width 0.3s ease-in-out;
+			transform: skew(-25deg);
+			transform-origin: right;
+		}
+
+		.Deals-section .content .button a:hover:after {
+			width: 150%;
+			left: -10px;
+			transform-origin: left;
+
+		}
+
+		.Deals-section .content .button a:hover {
+			color: #fff;
+			transition: all 0.5s ease;
+		}
+
+
+		.Deals-section .content .button a:nth-of-type(1) {
+			border-radius: 50px 0 0 50px;
+			border-right: none;
+		}
+
+		.Deals-section .content .button a:nth-of-type(2) {
+			border-radius: 0px 50px 50px 0;
+		}
+
+		.Deals-section .content .button .cart-icon {
+			padding-right: 8px;
+
+		}
+
+		.solid {
+			border: 2px solid black;
+		}
+
+		.Deals-section .img-section {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+
+		.Deals-section .img-section img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.Deals-section h2 {
+			/* color: #333; */
+			font-size: clamp(3rem, 5vw, 5rem);
+			/* Minimum of 1.5rem, preferred size of 5vw, and maximum of 3rem */
+			font-family: 'Lobster', sans-serif;
+			background: linear-gradient(45deg, #ff6a00, #ee0979);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+	</style>
 </head>
+
 <body>
-    <div class="wrapper">
-        <div class="outer">
-            <div class="content animated fadeInLeft">
-                <span class="bg animated fadeInDown">EXCLUSIVE</span>
-                <h1>Afro<br/> baseball hair</h1>
-                <p>Shadow your real allegiance to New York's Pirate radio with this cool cap featuring the Graphic Know Wave logo.</p>
-                
-                <div class="button">
-                    <a href="#">$115</a><a class="cart-btn" href="#"><i class="cart-icon ion-bag"></i>ADD TO CART</a>
-                </div>
-                
-            </div>
-            <img src="https://bit.ly/2kOzUTm" width="300px" class="animated fadeInRight">
-        </div>
-        <p class="footer">Based on the Silk UI Kit - DesignModo Market</p>
-    </div>
+	<section class="Deals-section">
+		<div class="container">
+			<div class="row py-5">
+				<div class="col-lg-6 col-md-6 col-sm-12 solid">
+					<div class="content">
+						<span class="bg my-5">EXCLUSIVE OFFER</span>
+						<h2> Wireless Bluetooth <br />Headphones 40% OFF</h2>
+						<p>Enjoy crystal-clear sound with our Wireless Bluetooth Headphones. Noise-canceling, comfy, and
+							long-lasting—now 40% off! Hurry, limited time offer!</p>
+
+
+
+						<div class="button">
+							<a href="#">$115</a><a class="cart-btn" href="#"><i class="cart-icon ion-bag"></i>ADD TO
+								CART</a>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 solid img-section">
+					<div class="img">
+						<figure>
+							<img src="images (4).jpeg" width="300px" class="solid">
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	
+    <!-- Plugins JS File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/superfish.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.plugin.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/demos/demo-2.js"></script>
+
 </body>
+
 </html>
