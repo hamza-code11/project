@@ -1,273 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Molla - Bootstrap eCommerce Template</title>
-        <meta name="keywords" content="HTML5 Template">
-        <meta name="description" content="Molla - Bootstrap eCommerce Template">
-        <meta name="author" content="p-themes">
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
-        <link rel="manifest" href="assets/images/icons/site.html">
-        <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
-        <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
-        <meta name="apple-mobile-web-app-title" content="Molla">
-        <meta name="application-name" content="Molla">
-        <meta name="msapplication-TileColor" content="#cc9966">
-        <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
-        <!-- Plugins CSS File -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
-        <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
-        <!-- Main CSS File -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/skins/skin-demo-2.css">
-        <link rel="stylesheet" href="assets/css/demos/demo-2.css">
-    
-        <style>
 
-            
-/* services section  */
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Molla - Bootstrap eCommerce Template</title>
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Molla - Bootstrap eCommerce Template">
+    <meta name="author" content="p-themes">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/icons/site.html">
+    <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Molla">
+    <meta name="application-name" content="Molla">
+    <meta name="msapplication-TileColor" content="#cc9966">
+    <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/skins/skin-demo-2.css">
+    <link rel="stylesheet" href="assets/css/demos/demo-2.css">
 
-.skills .card-row {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-.skills .card-container {
-    display: flex;
-    animation: slide 15s linear infinite;
-}
+    <style>
+        #featured-section .product-card {
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+            width: 95%;
+        }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
+        #featured-section .product-card {
+            display: flex;
+            flex-direction: column;
+        }
 
-    100% {
-        transform: translateX(-50%);
-    }
-}
+        #featured-section .product-card .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-.skills .card {
-    width: 22%;
-    /* Adjust for 4 cards in a row */
-    margin: 0 10px;
-    flex-shrink: 0;
-}
+        #featured-section .product-card:hover img {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
 
+        #featured-section .product-image {
+            transition: 0.5s;
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
 
-#services h2 {
-    font-size: 3.5rem;
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    color: var(--heading-color);
-    letter-spacing: 5px;
-    font-weight: 700;
-    text-shadow: var(--shadow-color);
-    /* animation: glowing 1.5s ease-in-out infinite alternate; */
-}
+        #featured-section .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
 
-/* @keyframes glowing {
-    0% {
-        text-shadow: 0 2px 6px rgba(0, 255, 255, 0.7);
-    }
+        .badge-custom {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 25px;
+            color: #2c3e50;
+            cursor: pointer;
+            z-index: 10;
+        }
 
-    100% {
-        text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.5);
-    }
-} */
+        #featured-section .price {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
 
-#services .row {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    margin-top: 20px;
-    opacity: 0;
-    animation: fadeInUp 2s ease-in-out forwards;
-}
+        #featured-section .dis-price {
+            text-decoration: line-through;
+            color: #f84242;
+            font-size: 1.5rem;
+        }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+        #featured-section .btn-custom {
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            border: none;
+            transition: 0.3s;
+        }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        #featured-section .btn-custom:hover {
+            transform: translateX(5px);
+            box-shadow: -5px 5px 15px rgba(46, 204, 113, 0.3);
+        }
 
-#services .service-box {
-    background: var(--card-bg-color);
-    border-radius: 15px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: var(--shadow-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: var(--text-color);
-    position: relative;
-    min-height: 350px; /* Set a minimum height for consistent card size */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensure the text and content are spaced evenly */
-}
+        #featured-section p {
+            font-size: 1.5rem;
+        }
 
-#services .service-box:hover {
-    box-shadow: var(--shadow-color);
-}
-
-#services .service-box i {
-    font-size: 4rem;
-    color: #1abc9c;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
-
-#services .service-box:hover i {
-    color: var(--btn-bg-color);
-}
-
-
-#services .service-box .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-
-#services .service-box h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    color: var(--heading-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    flex-grow: 1; /* Ensure the title doesn't overlap the description */
-}
-
-#services .service-box p {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-#services .learn-more:hover {
-    color: #ecf0f1;
-    border-bottom: 2px solid #1abc9c;
-}
-
-@media (max-width: 768px) {
-    #services h2 {
-        font-size: 2.5rem;
-    }
-
-    #services .service-box {
-        padding: 20px;
-        max-width: 100%;
-    }
-}
-#services .service-box img {
-    width: 100%; /* Ensure the image takes up the full width of the card */
-    height: 200px; /* Set a fixed height to ensure uniformity */
-    object-fit: cover; /* Ensure the image covers the space without stretching */
-    border-radius: 10px; /* Optional: Adds rounded corners to the images */
-}
-
-
-            .solid{
-                border: 2px solid red;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #featured-section h5 {
+                font-size: 2.5rem;
             }
-        </style>
-    </head>
-<body>
-    
 
-    <section id="services">
-        <div class="container skills py-5">
-            <h2>Our Products</h2>
-            <div class="card-row">
+            .product-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        #featured-section .featured-cards .card-row {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #featured-section .featured-cards .card-container {
+            display: flex;
+            animation: slide 15s linear infinite;
+        }
+
+        /* @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        } */
+
+        .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* Sirf 2 lines tak show hoga */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .solid {
+            border: 2px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <section id="featured-section">
+        <div class="container-fluid featured-cards py-5 solid">
+            <h2>
+                <center>Our Products</center>
+            </h2>
+            <div class="row card-row py-5">
                 <div class="card-container">
-    
-                    <!-- Laptop -->
-                    <div class="card service-box solid">
-                        <div class="card-body">
-                            <img src="download.jpeg" alt="Laptop" class="card-img-top">
-                            <h4 class="card-title">Laptop</h4>
-                            <p class="card-text">High-performance laptops for work, study, and entertainment. Equipped with powerful processors, long-lasting batteries, and stunning displays.</p>
+
+                    <!-- Premium Wireless Headphones -->
+                    <div class="col-lg-2 col-md-3 col-sm-12 mb-4 d-flex">
+                        <div class="card product-card border-0 rounded-4 shadow-sm h-100 d-flex flex-column">
+                            <i class="fa fa-heart-o badge-custom" onclick="toggleWishlist(this)"></i>
+                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                                class="product-image" alt="Premium Wireless Headphones">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="fw-bold">Premium Wireless Headphones</h5>
+                                <p class="text-muted description mb-1">Experience crystal-clear sound with advanced
+                                    noise
+                                    cancellation technology. Perfect for music lovers and professionals alike.</p>
+
+                                <div class="colors mb-2">
+                                    <button class="border-0 rounded"
+                                        style="background-color: #ff0000; width: 20px; height: 20px;"
+                                        onclick="setColor('#ff0000')"></button>
+                                    <button class="border-0 rounded mx-1"
+                                        style="background-color: #00ff00; width: 20px; height: 20px;"
+                                        onclick="setColor('#00ff00')"></button>
+                                    <button class="border-0 rounded"
+                                        style="background-color: #0000ff; width: 20px; height: 20px;"
+                                        onclick="setColor('#0000ff')"></button>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="price">Rs299.99 /<span class="dis-price"> Rs878</span></span>
+                                    <a class="btn btn-custom text-white">Add to Cart</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
-                    <!-- Wireless Headphones -->
-                    <div class="card service-box solid">
-                        <div class="card-body">
-                            <img src="images (4).jpeg" alt="Wireless Headphones" class="card-img-top">
-                            <h4 class="card-title">Wireless Headphones</h4>
-                            <p class="card-text">Enjoy immersive sound with noise-canceling wireless headphones. Perfect for music lovers and travelers.</p>
+
+                    <!-- High-Performance Laptop -->
+                    <div class="col-lg-2 col-md-3 col-sm-12 mb-4 d-flex">
+                        <div class="card product-card border-0 rounded-4 shadow-sm h-100 d-flex flex-column">
+                            <i class="fa fa-heart-o badge-custom" onclick="toggleWishlist(this)"></i>
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                                class="product-image" alt="High-Performance Laptop">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="fw-bold">High-Performance Laptop</h5>
+                                <p class="text-muted mb-1">Powerful performance for gaming, editing, and multitasking.
+                                    Equipped with the latest processor and high-speed RAM.</p>
+
+                                <div class="div mb-4">
+                                    <button class="border-0 rounded"
+                                        style="background-color: #ff0000; width: 20px; height: 20px;"
+                                        onclick="setColor('#ff0000')"></button>
+                                    <button class="border-0 rounded mx-1"
+                                        style="background-color: #00ff00; width: 20px; height: 20px;"
+                                        onclick="setColor('#00ff00')"></button>
+                                    <button class="border-0 rounded"
+                                        style="background-color: #0000ff; width: 20px; height: 20px;"
+                                        onclick="setColor('#0000ff')"></button>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="price">Rs899.99 /<span class="dis-price"> Rs1200</span></span>
+                                    <button class="btn btn-custom text-white px-4 py-2 rounded-pill">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
+
                     <!-- Smartwatch -->
-                    <div class="card service-box solid">
-                        <div class="card-body">
-                            <img src="download (1).jpeg" alt="Smartwatch" class="card-img-top">
-                            <h4 class="card-title">Smartwatch</h4>
-                            <p class="card-text">Track your health, notifications, and more with a stylish and functional smartwatch. Stay connected and active all day.</p>
+                    <div class="col-lg-2 col-md-3 col-sm-12 mb-4 d-flex">
+                        <div class="card product-card border-0 rounded-4 shadow-sm h-100 d-flex flex-column">
+                            <i class="fa fa-heart-o badge-custom" onclick="toggleWishlist(this)"></i>
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                                class="product-image" alt="Smartwatch">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="fw-bold">Smartwatch</h5>
+                                <p class="text-muted mb-1">Stay connected with a sleek smartwatch that tracks your
+                                    fitness, heart rate, and notifications. Perfect for an active lifestyle.</p>
+
+                                <div class="div mb-4">
+                                    <button class="border-0 rounded"
+                                        style="background-color: #ff0000; width: 20px; height: 20px;"
+                                        onclick="setColor('#ff0000')"></button>
+                                    <button class="border-0 rounded mx-1"
+                                        style="background-color: #00ff00; width: 20px; height: 20px;"
+                                        onclick="setColor('#00ff00')"></button>
+                                    <button class="border-0 rounded"
+                                        style="background-color: #0000ff; width: 20px; height: 20px;"
+                                        onclick="setColor('#0000ff')"></button>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="price">Rs199.99 /<span class="dis-price"> Rs499</span></span>
+                                    <button class="btn btn-custom text-white px-4 py-2 rounded-pill">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
-                    <!-- Smartphone -->
-                    <div class="card service-box solid">
-                        <div class="card-body">
-                            <img src="download (2).jpeg" alt="Smartphone" class="card-img-top">
-                            <h4 class="card-title">Smartphone</h4>
-                            <p class="card-text">Latest smartphones with cutting-edge features, exceptional cameras, and lightning-fast performance for all your needs.</p>
+
+                    <!-- Latest Smartphone -->
+                    <div class="col-lg-2 col-md-3 col-sm-12 mb-4 d-flex">
+                        <div class="card product-card border-0 rounded-4 shadow-sm h-100 d-flex flex-column">
+                            <i class="fa fa-heart-o badge-custom" onclick="toggleWishlist(this)"></i>
+                            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                                class="product-image" alt="Latest Smartphone">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="fw-bold">Latest Smartphone</h5>
+                                <p class="text-muted mb-1">Capture every moment with the latest smartphone featuring a
+                                    high-resolution camera, long-lasting battery, and stunning display.</p>
+
+                                <div class="div mb-4">
+                                    <button class="border-0 rounded"
+                                        style="background-color: #ff0000; width: 20px; height: 20px;"
+                                        onclick="setColor('#ff0000')"></button>
+                                    <button class="border-0 rounded mx-1"
+                                        style="background-color: #00ff00; width: 20px; height: 20px;"
+                                        onclick="setColor('#00ff00')"></button>
+                                    <button class="border-0 rounded"
+                                        style="background-color: #0000ff; width: 20px; height: 20px;"
+                                        onclick="setColor('#0000ff')"></button>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="price">Rs699.99 /<span class="dis-price"> Rs999</span></span>
+                                    <button class="btn btn-custom text-white px-4 py-2 rounded-pill">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
+
                     <!-- Gaming Console -->
-                    <div class="card service-box solid">
-                        <div class="card-body">
-                            <img src="download (3).jpeg" alt="Gaming Console" class="card-img-top">
-                            <h4 class="card-title">Gaming Console</h4>
-                            <p class="card-text">Get the ultimate gaming experience with the latest gaming consoles, featuring high-definition graphics and a vast library of games.</p>
+                    <div class="col-lg-2 col-md-3 col-sm-12 mb-4 d-flex">
+                        <div class="card product-card border-0 rounded-4 shadow-sm h-100 d-flex flex-column">
+                            <i class="fa fa-heart-o badge-custom" onclick="toggleWishlist(this)"></i>
+                            <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                                class="product-image" alt="Gaming Console">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="fw-bold">Gaming Console</h5>
+                                <p class="text-muted mb-1">Immerse yourself in the ultimate gaming experience with the
+                                    latest gaming console. Enjoy stunning graphics and seamless gameplay.</p>
+
+                                <div class="div mb-4">
+                                    <button class="border-0 rounded"
+                                        style="background-color: #ff0000; width: 20px; height: 20px;"
+                                        onclick="setColor('#ff0000')"></button>
+                                    <button class="border-0 rounded mx-1"
+                                        style="background-color: #00ff00; width: 20px; height: 20px;"
+                                        onclick="setColor('#00ff00')"></button>
+                                    <button class="border-0 rounded"
+                                        style="background-color: #0000ff; width: 20px; height: 20px;"
+                                        onclick="setColor('#0000ff')"></button>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="price">Rs499.99 /<span class="dis-price"> Rs799</span></span>
+                                    <button class="btn btn-custom text-white px-4 py-2 rounded-pill">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
+
                     <!-- Bluetooth Speaker -->
-                    <div class="card service-box solid">
-                        <div class="card-body">
-                            <img src="download (4).jpeg" alt="Bluetooth Speaker" class="card-img-top">
-                            <h4 class="card-title">Bluetooth Speaker</h4>
-                            <p class="card-text">Portable and powerful Bluetooth speakers with rich sound quality, ideal for any occasion, from parties to outdoor adventures.</p>
+                    <div class="col-lg-2 col-md-3 col-sm-12 mb-4 d-flex">
+                        <div class="card product-card border-0 rounded-4 shadow-sm h-100 d-flex flex-column">
+                            <i class="fa fa-heart-o badge-custom" onclick="toggleWishlist(this)"></i>
+                            <img src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                                class="product-image" alt="Bluetooth Speaker">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="fw-bold">Bluetooth Speaker</h5>
+                                <p class="text-muted mb-1">Enjoy high-quality sound on the go with this portable
+                                    Bluetooth speaker. Perfect for parties, travel, and outdoor adventures.</p>
+
+                                <div class="div mb-4">
+                                    <button class="border-0 rounded"
+                                        style="background-color: #ff0000; width: 20px; height: 20px;"
+                                        onclick="setColor('#ff0000')"></button>
+                                    <button class="border-0 rounded mx-1"
+                                        style="background-color: #00ff00; width: 20px; height: 20px;"
+                                        onclick="setColor('#00ff00')"></button>
+                                    <button class="border-0 rounded"
+                                        style="background-color: #0000ff; width: 20px; height: 20px;"
+                                        onclick="setColor('#0000ff')"></button>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="price">Rs99.99 /<span class="dis-price"> Rs199</span></span>
+                                    <button class="btn btn-custom text-white px-4 py-2 rounded-pill">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
     </section>
-    
+
+
+    <script>
+        function toggleWishlist(icon) {
+            icon.classList.toggle('fa-heart-o');
+            icon.classList.toggle('fa-heart');
+            icon.style.color = icon.classList.contains('fa-heart') ? 'red' : '#2c3e50';
+        }
+    </script>
 
 
 
 
 
-    
+
     <!-- Plugins JS File -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -283,4 +386,5 @@
     <script src="assets/js/demos/demo-2.js"></script>
 
 </body>
+
 </html>
